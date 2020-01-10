@@ -1,0 +1,23 @@
+.gallery {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 30px 20px;
+    margin-bottom: 30px;
+
+    @media (min-width: $breakpoint-s) {
+        grid-template-columns: auto auto;
+    }
+
+    @media (min-width: $breakpoint-m) {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+.gallery__image {
+    cursor: pointer;
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+

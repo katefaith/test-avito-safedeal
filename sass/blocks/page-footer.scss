@@ -1,0 +1,15 @@
+.page-footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    border-top: 1px solid #CCCCCC;
+}
+
+.page-footer__copyright{
+    margin-top: 18px;
+    margin-bottom: 18px;
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+}

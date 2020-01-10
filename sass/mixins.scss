@@ -1,6 +1,6 @@
 @mixin container {
   box-sizing: border-box;
-  max-width: $bp-tablet;
+  max-width: $breakpoint-m;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
