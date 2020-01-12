@@ -8,21 +8,45 @@
   </head>
 
   <body>
-    <header class="page-header">
-      Test App
-    </header>
+    <div class="page-wrapper">
+      <header class="page-header">
+        Test App
+      </header>
 
-    <main class="page-content">
-      <section class="gallery">
-      </section>
-    </main>
+      <main class="page-content">
+        <section class="gallery"></section>
+      </main>
+
+      <footer class="page-footer">
+        <div class="page-footer__copyright">&#169; 2018-2019</div>
+      </footer>
+
+    </div>
 
     <section class="modal  modal--show">
-    </section>
+      <div class="modal__wrapper">
+        <div class="modal__btn-close"></div>
+        <div class="modal__image">
+          <img src="https://i.picsum.photos/id/238/600/400.jpg" alt="photo" />
+        </div>
+        <div class="modal__comments-list  comments-list">
+          <div class="comment  comments-list__item">
+            <p class="comment__date">18.12.2019</p>
+            <p class="comment__text">Отличное фото</p>
+          </div>
+          <div class="comment  comments-list__item">
+            <p class="comment__date">18.12.2019</p>
+            <p class="comment__text">Я тут был, очень понравилось</p>
+          </div>
+        </div>
 
-    <footer class="page-footer">
-      <div class="page-footer__copyright">&#169; 2018-2019</div>
-    </footer>
+        <form class="modal__comment-form  comment-form" name="comment-form">
+          <input type="text" class="comment-form__input" placeholder="Ваше имя">
+          <input type="text" class="comment-form__input" placeholder="Ваш комментарий">
+          <button class="comment-form__btn" type="submit">Оставить комментарий</button>
+        </form>
+      </div>
+    </section>
 
     <script src="./js/app.js"></script>
   </body>

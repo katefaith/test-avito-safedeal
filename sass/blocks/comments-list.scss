@@ -1,0 +1,9 @@
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 22px 20px;
+
+    @media (min-width: $breakpoint-m) {
+        margin: 0;
+    }
+}

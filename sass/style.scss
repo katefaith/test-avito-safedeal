@@ -3,18 +3,20 @@
 @import "global/fonts.scss";
 @import "variables.scss";
 
+@import "blocks/page-wrapper.scss";
 @import "blocks/page-header.scss";
 @import "blocks/page-content.scss";
 @import "blocks/gallery.scss";
+@import "blocks/modal.scss";
+@import "blocks/comments-list.scss";
+@import "blocks/comment.scss";
+@import "blocks/comment-form.scss";
 @import "blocks/page-footer.scss";
 
 body {
-  @include container;
-  display: flex;
-  flex-direction: column;
   height: 100vh;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-weight: normal;
   font-size: 13px;
-  line-height: 1.1538;
+  line-height: 15px;
 }

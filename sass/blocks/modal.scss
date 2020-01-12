@@ -1,0 +1,72 @@
+.modal {
+    &--show {
+        display: flex;
+    }
+
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: flex-start;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal__wrapper {
+    position: relative;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #FFFFFF;
+
+    @media (min-width: $breakpoint-m) {
+        box-sizing: border-box;
+        height: auto;
+        width: 620px;
+        margin-top: 180px;
+        padding: 30px;
+
+        display: grid;
+        gap: 30px 15px;
+        grid-template-columns: 59% auto;
+        grid-template-areas: "image comments"
+                             "form comments";
+    }
+}
+
+.modal__image {
+    img {
+        display: block;
+        width: 100%;
+    }
+    margin-bottom: 25px;
+
+    @media (min-width: $breakpoint-m) {
+        grid-area: image;
+        margin-bottom: 0;
+    }
+}
+
+.modal__comments-list {
+    @media (min-width: $breakpoint-m) {
+        grid-area: comments;
+    }
+}
+
+.modal__comment-form {
+    @media (min-width: $breakpoint-m) {
+        grid-area: form;
+    }
+}
+
+.modal__btn-close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+    color: #000;
+    cursor: pointer;
+    background: url("../img/icon-close.png") no-repeat;
+}

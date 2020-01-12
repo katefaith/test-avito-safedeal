@@ -1,5 +1,7 @@
 'use strict';
 
+document.querySelector('.modal__btn-close').addEventListener('click', closeModal);
+
 loadGallery();
 
 function loadGallery() {
@@ -19,4 +21,9 @@ function loadGallery() {
             document.querySelector('.gallery').innerHTML = html;
         })
         .catch(error => console.log(error))
+}
+
+function closeModal() {
+    let modal = document.querySelector('.modal');
+    modal.classList.remove('modal--show');
 }

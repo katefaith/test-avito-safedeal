@@ -309,6 +309,22 @@ template {
   font-style: normal;
   font-weight: normal; }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("TrueType");
+  font-style: normal;
+  font-weight: normal; }
+
+.page-wrapper {
+  box-sizing: border-box;
+  max-width: 768px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; }
+
 .page-header {
   margin-top: 15px;
   margin-bottom: 30px;
@@ -345,6 +361,104 @@ template {
     display: block;
     width: 100%; }
 
+.modal {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  -ms-grid-row-align: flex-start;
+      align-items: flex-start;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); }
+  .modal--show {
+    display: flex; }
+
+.modal__wrapper {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #FFFFFF; }
+  @media (min-width: 768px) {
+    .modal__wrapper {
+      box-sizing: border-box;
+      height: auto;
+      width: 620px;
+      margin-top: 180px;
+      padding: 30px;
+      display: -ms-grid;
+      display: grid;
+      gap: 30px 15px;
+      -ms-grid-columns: 59% auto;
+          grid-template-columns: 59% auto;
+      grid-template-areas: "image comments" "form comments"; } }
+
+.modal__image {
+  margin-bottom: 25px; }
+  .modal__image img {
+    display: block;
+    width: 100%; }
+  @media (min-width: 768px) {
+    .modal__image {
+      grid-area: image;
+      margin-bottom: 0; } }
+
+@media (min-width: 768px) {
+  .modal__comments-list {
+    grid-area: comments; } }
+
+@media (min-width: 768px) {
+  .modal__comment-form {
+    grid-area: form; } }
+
+.modal__btn-close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  color: #000;
+  cursor: pointer;
+  background: url("../img/icon-close.png") no-repeat; }
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 22px 20px; }
+  @media (min-width: 768px) {
+    .comments-list {
+      margin: 0; } }
+
+.comment {
+  margin-bottom: 15px; }
+
+.comment__date,
+.comment__text {
+  margin-top: 0;
+  margin-bottom: 5px; }
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 22px 22px; }
+  @media (min-width: 768px) {
+    .comment-form {
+      margin: 0; } }
+
+.comment-form__input {
+  padding: 7px 11px 8px;
+  margin-bottom: 20px;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px; }
+
+.comment-form__btn {
+  padding: 8px 15px 7px;
+  border: none;
+  border-radius: 3px;
+  background-color: #4997D0;
+  color: #fff; }
+
 .page-footer {
   flex-grow: 0;
   flex-shrink: 0;
@@ -360,15 +474,8 @@ template {
   text-align: center; }
 
 body {
-  box-sizing: border-box;
-  max-width: 768px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: flex;
-  flex-direction: column;
   height: 100vh;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-weight: normal;
   font-size: 13px;
-  line-height: 1.1538; }
+  line-height: 15px; }
