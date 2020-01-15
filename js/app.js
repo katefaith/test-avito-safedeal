@@ -81,4 +81,5 @@ function closeModal(event) {
 function clearModal() {
     let html = '<p class="comments-list__notice">Комментариев пока нет</p>';
     document.querySelector('.comments-list').innerHTML = html;
+    document.querySelector('.modal__image').innerHTML = '';
 }
