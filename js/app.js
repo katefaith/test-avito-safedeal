@@ -4,6 +4,12 @@ loadGallery();
 
 document.querySelector('.gallery').addEventListener('click', showModal);
 document.querySelector('.modal').addEventListener('click', closeModal);
+document.addEventListener('keydown', function (event) {
+    if (event.keyCode === 27) {
+        document.querySelector('.modal').classList.remove('modal--show');
+        clearModal();
+    }
+});
 
 function loadGallery() {
     let url = 'https://boiling-refuge-66454.herokuapp.com/images/';
